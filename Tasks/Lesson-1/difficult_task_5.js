@@ -2,15 +2,13 @@
 // вернуть пустой массив (findDuplicates([1,2,3,4,5,1,2,6]) => [1,2])
 
 function FindDuplicates(array) {
-    const duplicatesNumbers = []
-    array.forEach((value) => {
-        if (array.filter((valueFilter) => {
-            return value === valueFilter
-        }).length !== 1) {
-            duplicatesNumbers.push(value)
-        }
+    let repeat = []
+    let unique = []
+    array.map((value) => {
+        unique.includes(value) ? repeat.push(value) : unique.push(value)
     })
-    return Array.from(new Set(duplicatesNumbers));
+    return repeat;
 }
 
 console.log(FindDuplicates([1, 2, 3, 4, 5, 1, 2, 6]))
+console.log(FindDuplicates([1, 2, 3]))

@@ -2,7 +2,7 @@
 // (имеют одинаковые символы, но в разном порядке)
 
 function TwoString(str1, str2) {
-    return str1.toUpperCase() === str2.split('').reverse().join('').toUpperCase();
+    return str1.split('').sort().join('') === str2.split('').sort().join('')
 }
 
-console.log(TwoString('hello', 'olleH'))
+console.log(TwoString('акробат', 'работка'))
