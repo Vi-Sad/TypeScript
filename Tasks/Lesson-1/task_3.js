@@ -5,16 +5,16 @@
 function TwoArrays(arr1, arr2) {
     let newArr = []
     arr1.map((value) => {
-        if (!(value in arr2)) {
+        if (!(arr2.includes(value))) {
             newArr.push(value)
         }
     })
     arr2.map((value) => {
-        if (!(value in arr1)) {
+        if (!(arr1.includes(value))) {
             newArr.push(value)
         }
     })
     return newArr;
 }
 
-console.log(TwoArrays([1, 2, 3], [1, 2, 4]))
+console.log(TwoArrays([1, 2, 3, 6], [1, 2, 4, 5]))
