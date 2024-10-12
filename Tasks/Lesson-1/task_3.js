@@ -17,4 +17,4 @@ function TwoArrays(arr1, arr2) {
     return newArr;
 }
 
-console.log(TwoArrays([1, 2, 3, 6], [1, 2, 4, 5]))
+console.log(TwoArrays([1, 2, 3], [1, 2, 4]))
