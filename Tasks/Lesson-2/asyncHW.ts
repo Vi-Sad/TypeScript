@@ -4,14 +4,15 @@ const yourTime = 2000
 
 const taskPromiseFunc = async (address: string, repeat: number, time: number) => {
     try {
-        let random = Math.random() * 2
+        const random = Math.random() * 2
         console.log(random)
-        const response = await fetch(random >= 1 ? address : 'fdsdff')
+        const response = await fetch(random >= 1 ? address : 'BadAddress404.com')
 
         if (response.ok) {
+            console.log('Good!')
             return await response.json()
         } else {
-            throw Error('Error!')
+            throw Error('Attempts have been exhausted')
         }
 
     } catch (e) {
